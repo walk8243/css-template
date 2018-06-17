@@ -13,10 +13,23 @@ Link
   <div class="link htauto min-ht-70"></div>
   <div class="link htauto min-ht-70"></div>
 </div>
+
+<div>
+  <p>
+    これは<a href="#">リンク</a>です。
+  </p>
+  <p>
+    これは<span class="link text" href="#">リンク</span>です。
+  </p>
+</div>
 ```
 */
 .link {
-  &,
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:not(.text),
   &.box {
     display: block;
     &:hover {
