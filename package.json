@@ -1,0 +1,26 @@
+{
+  "name": "css-template",
+  "version": "1.0.0",
+  "description": "cssのbase",
+  "main": "index.js",
+  "scripts": {
+    "gulp": "gulp",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/walk8243/css-template.git"
+  },
+  "author": "walk8243",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/walk8243/css-template/issues"
+  },
+  "homepage": "https://github.com/walk8243/css-template#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "lodash": "^4.17.10",
+    "minimatch": "^3.0.4"
+  },
+  "dependencies": {}
+}
