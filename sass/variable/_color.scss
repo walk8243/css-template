@@ -252,10 +252,15 @@ $theme-map: (
     background-color: $color;
   }
 }
-@each $name, $color in map-merge(map-merge($colors, $color-map), $theme-map) {
+@each $name, $color in map-merge($colors, $color-map) {
   .#{$name} {
     color: $color;
   }
+  .bg-#{$name} {
+    background-color: $color;
+  }
+}
+@each $name, $color in $theme-map {
   .bg-#{$name} {
     background-color: $color;
   }
