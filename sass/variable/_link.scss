@@ -1,0 +1,39 @@
+/*
+#overview
+Link
+*/
+/*#styleguide
+```
+<div class="grid col-5 gap-10">
+  <div class="link htauto min-ht-70"></div>
+  <div class="link htauto min-ht-70"></div>
+  <div class="link htauto min-ht-70"></div>
+  <div class="link htauto min-ht-70"></div>
+  <div class="link htauto min-ht-70"></div>
+  <div class="link htauto min-ht-70"></div>
+  <div class="link htauto min-ht-70"></div>
+</div>
+```
+*/
+.link {
+  &,
+  &.box {
+    display: block;
+    &:hover {
+      border: $border-set-solid;
+      border-radius: $border-radius;
+    }
+  }
+
+  &.text {
+    display: inline;
+    color: $primary;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+a {
+  @extend .link.text;
+}
