@@ -127,9 +127,15 @@ $color-map: (
   .gray-#{$name}0 {
     color: $color;
   }
+  .bg-gray-#{$name}0 {
+    background-color: $color;
+  }
 }
 @each $name, $color in map-merge($colors, $color-map) {
   .#{$name} {
     color: $color;
+  }
+  .bg-#{$name} {
+    background-color: $color;
   }
 }
