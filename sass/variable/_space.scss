@@ -1,25 +1,25 @@
 @for $i from 0 through 40 {
   @each $spaceKey, $spaceValue in ("m": "margin", "p": "padding") {
     .#{$spaceKey}-#{$i*5} {
-      #{$spaceValue}: $i * 5;
+      #{$spaceValue}: #{$i * 5}px;
     }
     .#{$spaceKey}t-#{$i*5} {
-      #{$spaceValue}: $i * 5;
+      #{$spaceValue}: #{$i * 5}px;
     }
     .#{$spaceKey}b-#{$i*5} {
-      #{$spaceValue}: $i * 5;
+      #{$spaceValue}: #{$i * 5}px;
     }
     .#{$spaceKey}l-#{$i*5} {
-      #{$spaceValue}: $i * 5;
+      #{$spaceValue}: #{$i * 5}px;
     }
     .#{$spaceKey}r-#{$i*5} {
-      #{$spaceValue}: $i * 5;
+      #{$spaceValue}: #{$i * 5}px;
     }
     .#{$spaceKey}x-#{$i*5} {
-      #{$spaceValue}: $i * 5;
+      #{$spaceValue}: #{$i * 5}px;
     }
     .#{$spaceKey}y-#{$i*5} {
-      #{$spaceValue}: $i * 5;
+      #{$spaceValue}: #{$i * 5}px;
     }
   }
 }
