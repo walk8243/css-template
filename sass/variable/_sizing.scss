@@ -20,5 +20,11 @@ $size: (
     .#{$sizeName}-#{$i * 10} {
       #{$sizeValue}: #{$i * 10}px;
     }
+    .min-#{$sizeName}-#{$i * 10} {
+      min-#{$sizeValue}: #{$i * 10}px;
+    }
+    .max-#{$sizeName}-#{$i * 10} {
+      max-#{$sizeValue}: #{$i * 10}px;
+    }
   }
 }

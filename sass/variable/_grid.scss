@@ -10,13 +10,13 @@
     }
   }
   @for $i from 0 through 10 {
-    &.gap-#{$i} {
+    &.gap-#{$i*5} {
       grid-gap: #{$i * 5}px;
     }
-    &.col-gap-#{$i} {
+    &.col-gap-#{$i*5} {
       grid-column-gap: #{$i * 5}px;
     }
-    &.row-gap-#{$i} {
+    &.row-gap-#{$i*5} {
       grid-row-gap: #{$i * 5}px;
     }
   }
