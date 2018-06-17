@@ -1,0 +1,18 @@
+// 太さ
+$border-width-light: 1px;
+$border-width-base:  2px;
+$border-width-bold:  3px;
+
+// セット
+$border-set-thin:  $border-width-light solid $gray-900;
+$border-set-solid:  $border-width-base solid $gray-900;
+$border-set-double: $border-width-bold double $gray-900;
+$border-set-dotted: $border-width-base dotted $gray-900;
+$border-set-dashed: $border-width-base dashed $gray-900;
+$border-set-groove: $border-width-base groove $gray-900;
+$border-set-ridge: $border-width-base ridge $gray-900;
+
+// 丸み
+$border-radius-shallow: 2px;
+$border-radius:         3px;
+$border-radius-deep:    5px;
