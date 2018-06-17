@@ -1,22 +1,135 @@
+// グレートーン
 $white:    #fff;
-$gray-100: #f8f9fa;
-$gray-200: #e9ecef;
-$gray-300: #dee2e6;
-$gray-400: #ced4da;
-$gray-500: #adb5bd;
-$gray-600: #6c757d;
-$gray-700: #495057;
-$gray-800: #343a40;
-$gray-900: #212529;
+$gray-050: #f7f8f7;
+$gray-100: #eff0ef;
+$gray-200: #dadcda;
+$gray-250: #d0d3cf;
+$gray-300: #c0c4c0;
+$gray-400: #a0a6a0;
+$gray-500: #7d837c;
+$gray-600: #5b5f59;
+$gray-700: #3d3f3b;
+$gray-750: #2d302c;
+$gray-800: #242523;
+$gray-900: #0f100f;
+$gray-950: #070807;
 $black:    #000;
 
-$blue:    #007bff;
-$indigo:  #6610f2;
-$purple:  #6f42c1;
-$pink:    #e83e8c;
-$red:     #dc3545;
-$orange:  #fd7e14;
-$yellow:  #ffc107;
-$green:   #28a745;
-$teal:    #20c997;
-$cyan:    #17a2b8;
+$red:      #bf1e33;
+$orange:   #fd7e00;
+$yellow:   #ffbe00;
+$green:    #4db56a;
+$cyan:     #219ddd;
+$blue:     #0067c0;
+$sky:      #95c0ec;
+$navy:     #333c5e;
+$purple:   #a260bf;
+$pink:     #e38698;
+$brawn:    #734e30;
+$magenta:  #c949a2;
+$ivory:    #e3d4ca;
+
+
+// 彩度83%
+$sat83-01: #af731d;
+$sat83-02: #93ad1d;
+$sat83-03: #3eaa1d;
+$sat83-04: #1ea84e;
+$sat83-05: #1ca097;
+$sat83-06: #1d5ba3;
+$sat83-07: #2b1c9e;
+$sat83-08: #751b9b;
+$sat83-09: #991b73;
+$sat83-10: #991b28;
+// 明度彩度MAX
+$vivid-01: #ff3407;
+$vivid-02: #ff9307;
+$vivid-03: #fff607;
+$vivid-04: #a4ff07;
+$vivid-05: #41ff07;
+$vivid-06: #07ff30;
+$vivid-07: #07ff93;
+$vivid-08: #07fff6;
+$vivid-09: #07a4ff;
+$vivid-10: #0741ff;
+$vivid-11: #3007ff;
+$vivid-12: #9307ff;
+$vivid-13: #f607ff;
+$vivid-14: #ff07a4;
+$vivid-15: #ff0741;
+
+$grays: (
+  "05": $gray-050,
+  "10": $gray-100,
+  "20": $gray-200,
+  "25": $gray-250,
+  "30": $gray-300,
+  "40": $gray-400,
+  "50": $gray-500,
+  "60": $gray-600,
+  "70": $gray-700,
+  "75": $gray-750,
+  "80": $gray-800,
+  "95": $gray-950,
+  "90": $gray-900
+);
+$colors: (
+  "red":     $red,
+  "orange":  $orange,
+  "yellow":  $yellow,
+  "green":   $green,
+  "cyan":    $cyan,
+  "blue":    $blue,
+  "sky":     $sky,
+  "navy":    $navy,
+  "purple":  $purple,
+  "pink":    $pink,
+  "brawn":   $brawn,
+  "magenta": $magenta,
+  "ivory":   $ivory
+);
+$color-map: (
+  "sat83-01": $sat83-01,
+  "sat83-02": $sat83-02,
+  "sat83-03": $sat83-03,
+  "sat83-04": $sat83-04,
+  "sat83-05": $sat83-05,
+  "sat83-06": $sat83-06,
+  "sat83-07": $sat83-07,
+  "sat83-08": $sat83-08,
+  "sat83-09": $sat83-09,
+  "sat83-10": $sat83-10,
+  "vivid-01": $vivid-01,
+  "vivid-02": $vivid-02,
+  "vivid-03": $vivid-03,
+  "vivid-04": $vivid-04,
+  "vivid-05": $vivid-05,
+  "vivid-06": $vivid-06,
+  "vivid-07": $vivid-07,
+  "vivid-08": $vivid-08,
+  "vivid-09": $vivid-09,
+  "vivid-10": $vivid-10,
+  "vivid-11": $vivid-11,
+  "vivid-12": $vivid-12,
+  "vivid-13": $vivid-13,
+  "vivid-14": $vivid-14,
+  "vivid-15": $vivid-15
+);
+
+
+.white {
+  color: $white;
+}
+.black {
+  color: $black;
+}
+@each $name, $color in $grays {
+  .gray-#{$name}0 {
+    color: $color;
+  }
+}
+@each $name, $color in map-merge($colors, $color-map) {
+  .#{$name} {
+    color: $color;
+  }
+}
