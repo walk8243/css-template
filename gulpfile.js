@@ -1,7 +1,15 @@
-var gulp  = require('gulp');
+var gulp  = require('gulp'),
+    sass  = require('gulp-sass');
 
-console.log("gulp");
-
-gulp.task('default', function() {
-  console.log("gulp default");
+// タスクの定義
+gulp.task('sass', function() {
+  gulp.src('./sass/**/*.scss')
+    .pipe(
+      sass({
+        outputStyle: 'compact'
+      }).on('error', sass.logError)
+    ).pipe(gulp.dest('./css'));
 });
+
+// デフォルトでの起動時の設定
+gulp.task('default', ['sass']);

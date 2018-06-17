@@ -19,8 +19,11 @@
   "homepage": "https://github.com/walk8243/css-template#readme",
   "devDependencies": {
     "gulp": "^3.9.1",
+    "gulp-sass": "^4.0.1",
+    "hoek": "^5.0.3",
     "lodash": "^4.17.10",
-    "minimatch": "^3.0.4"
+    "minimatch": "^3.0.4",
+    "tunnel-agent": "^0.6.0"
   },
   "dependencies": {}
 }
