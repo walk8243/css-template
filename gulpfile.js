@@ -6,7 +6,7 @@ gulp.task('sass', function() {
   gulp.src('./sass/**/*.scss')
     .pipe(
       sass({
-        outputStyle: 'compact'
+        outputStyle: 'compressed'
       }).on('error', sass.logError)
     ).pipe(gulp.dest('./css'));
 });
