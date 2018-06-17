@@ -1,6 +1,4 @@
 
-@import "variables";
+@import "variable/_variables";
 
-html {
-  color: $gray-900;
-}
+@import "base";
