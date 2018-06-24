@@ -1,5 +1,7 @@
 var gulp  = require('gulp'),
     sass  = require('gulp-sass'),
+    cssmin  = require('gulp-cssmin'),
+    rename  = require('gulp-rename'),
     autoprefixer  = require('gulp-autoprefixer'),
     frontnote = require('gulp-frontnote');
 
@@ -11,10 +13,15 @@ gulp.task('sass', function() {
     }))
     .pipe(
       sass({
-        outputStyle: 'compressed'
+        outputStyle: 'expanded'
       }).on('error', sass.logError)
     )
     .pipe(autoprefixer())
+    .pipe(gulp.dest('./css'))
+    .pipe(cssmin())
+    .pipe(rename({
+      extname: 'min.css'
+    }))
     .pipe(gulp.dest('./css'));
 });
 
