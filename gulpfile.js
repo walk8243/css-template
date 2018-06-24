@@ -28,3 +28,7 @@ gulp.task('sass', function() {
 
 // デフォルトでの起動時の設定
 gulp.task('default', ['sass']);
+
+gulp.task('watch', ['default'], function() {
+  gulp.watch('./sass/**/*.scss', ['sass']);
+});
