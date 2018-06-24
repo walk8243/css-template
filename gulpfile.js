@@ -9,7 +9,8 @@ var gulp  = require('gulp'),
 gulp.task('sass', function() {
   gulp.src('./sass/*.scss')
     .pipe(frontnote({
-      css: '../css/style.css'
+      css       : '../css/style.min.css',
+      overview  : './README.md'
     }))
     .pipe(
       sass({
