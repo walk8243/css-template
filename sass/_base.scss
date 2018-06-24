@@ -1,2 +1,6 @@
 // Template importer
-@import "variable";
+
+@import "functions";
+@import "variables/variables";
+@import "mixins/mixins";
+@import "utilities/utilities";
