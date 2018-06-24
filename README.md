@@ -1,5 +1,5 @@
 # css-template
 cssのbase
 
-# Using open source software
+## 使用しているOSS
 - [twbs/bootstrap](https://github.com/twbs/bootstrap)
