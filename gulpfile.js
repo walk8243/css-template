@@ -5,7 +5,7 @@ var gulp  = require('gulp'),
 
 // タスクの定義
 gulp.task('sass', function() {
-  gulp.src('./sass/**/*.scss')
+  gulp.src('./sass/*.scss')
     .pipe(frontnote({
       css: '../css/style.css'
     }))
