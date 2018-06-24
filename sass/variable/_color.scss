@@ -1,27 +1,35 @@
 // stylelint-disable
 $white:    #fff !default;
+$gray-050: #a8b5c2 !default;
 $gray-100: #f8f9fa !default;
 $gray-200: #e9ecef !default;
+$gray-250: #e5e8eb !default;
 $gray-300: #dee2e6 !default;
 $gray-400: #ced4da !default;
 $gray-500: #adb5bd !default;
 $gray-600: #6c757d !default;
 $gray-700: #495057 !default;
+$gray-750: #3c4249 !default;
 $gray-800: #343a40 !default;
 $gray-900: #212529 !default;
+$gray-950: #3c4249 !default;
 $black:    #000 !default;
 
 $grays: () !default;
 $grays: map-merge((
+  "050": $gray-050,
   "100": $gray-100,
   "200": $gray-200,
+  "250": $gray-250,
   "300": $gray-300,
   "400": $gray-400,
   "500": $gray-500,
   "600": $gray-600,
   "700": $gray-700,
+  "750": $gray-750,
   "800": $gray-800,
-  "900": $gray-900
+  "900": $gray-900,
+  "950": $gray-950
 ), $grays);
 
 $blue:    #007bff !default;
