@@ -14,6 +14,10 @@
   background-color: transparent;
 }
 
+@each $color, $value in $theme-colors {
+  @include bg-btn(".#{$color}", $value);
+}
+
 .background-fixed-image {
   background-color: $gray-950;
   background-position: center;
