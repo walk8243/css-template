@@ -17,11 +17,12 @@
 }
 
 @mixin bg-btn($parent, $color) {
-  a#{$parent},
-  button#{$parent} {
-    background-color: $color;
-    @include hover-focus {
-      background-color: darken($color, 10%);
+  @include button-selectors {
+    &#{$parent} {
+      background-color: $color;
+      @include hover-focus {
+        background-color: darken($color, 10%);
+      }
     }
   }
 }

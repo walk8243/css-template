@@ -107,3 +107,15 @@
     border-radius: 0;
   }
 }
+
+
+$btn-selectors: '';
+@each $selector in $btn-objs {
+  $btn-selectors: $btn-selectors + ", " + $selector;
+}
+$btn-selectors: #{str-slice($btn-selectors, 2)};
+@mixin button-selectors() {
+  #{$btn-selectors} {
+    @content
+  }
+}
