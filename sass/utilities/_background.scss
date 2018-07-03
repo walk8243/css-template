@@ -1,15 +1,3 @@
-.bg-white {
-  background-color: $white;
-}
-@each $key, $value in $grays {
-  .bg-gray#{$key} {
-    background-color: $value;
-  }
-}
-.bg-black {
-  background-color: $black;
-}
-
 .bg-transparent {
   background-color: transparent;
 }
