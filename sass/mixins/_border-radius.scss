@@ -33,3 +33,9 @@
     border-bottom-left-radius: $radius;
   }
 }
+
+@mixin border-circle-radius() {
+  @if $enable-rounded {
+    border-radius: 50%;
+  }
+}
