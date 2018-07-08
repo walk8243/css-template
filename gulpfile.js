@@ -21,7 +21,7 @@ gulp.task('sass', function() {
     .pipe(gulp.dest('./css'))
     .pipe(cssmin())
     .pipe(rename({
-      extname: 'min.css'
+      extname: '.min.css'
     }))
     .pipe(gulp.dest('./css'));
 });
