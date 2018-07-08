@@ -1,0 +1,74 @@
+/*
+ * Sawarabi Gothic (Japanese) http://sawarabi-fonts.osdn.jp/
+ */
+@font-face {
+font-family: 'Noto Sans';
+font-style: normal;
+font-weight: 100;
+src: url(../fonts/NotoSansCJKjp-hinted/NotoSansJP-Thin.woff2) format('woff2'),
+     url(../fonts/NotoSansCJKjp-hinted/NotoSansJP-Thin.woff) format('woff'),
+     url(../fonts/NotoSansCJKjp-hinted/NotoSansJP-Thin.ttf) format('opentype');
+}
+@font-face {
+font-family: 'Noto Sans';
+font-style: normal;
+font-weight: 200;
+src: url(../fonts/NotoSansCJKjp-hinted/NotoSansJP-Light.woff2) format('woff2'),
+     url(../fonts/NotoSansCJKjp-hinted/NotoSansJP-Light.woff) format('woff'),
+     url(../fonts/NotoSansCJKjp-hinted/NotoSansJP-Light.ttf) format('opentype');
+}
+@font-face {
+font-family: 'Noto Sans';
+font-style: normal;
+font-weight: 300;
+src: url(../fonts/NotoSansCJKjp-hinted/NotoSansJP-DemiLight.woff2) format('woff2'),
+     url(../fonts/NotoSansCJKjp-hinted/NotoSansJP-DemiLight.woff) format('woff'),
+     url(../fonts/NotoSansCJKjp-hinted/NotoSansJP-DemiLight.ttf) format('opentype');
+}
+@font-face {
+ font-family: 'Noto Sans';
+ font-style: normal;
+ font-weight: 400;
+ src: url(../fonts/NotoSansCJKjp-hinted/NotoSansJP-Regular.woff2) format('woff2'),
+      url(../fonts/NotoSansCJKjp-hinted/NotoSansJP-Regular.woff) format('woff'),
+      url(../fonts/NotoSansCJKjp-hinted/NotoSansJP-Regular.ttf) format('opentype');
+}
+@font-face {
+ font-family: 'Noto Sans';
+ font-style: normal;
+ font-weight: 500;
+ src: url(../fonts/NotoSansCJKjp-hinted/NotoSansJP-Medium.woff2) format('woff2'),
+      url(../fonts/NotoSansCJKjp-hinted/NotoSansJP-Medium.woff) format('woff'),
+      url(../fonts/NotoSansCJKjp-hinted/NotoSansJP-Medium.ttf) format('opentype');
+}
+@font-face {
+ font-family: 'Noto Sans';
+ font-style: normal;
+ font-weight: 700;
+ src: url(../fonts/NotoSansCJKjp-hinted/NotoSansJP-Bold.woff2) format('woff2'),
+      url(../fonts/NotoSansCJKjp-hinted/NotoSansJP-Bold.woff) format('woff'),
+      url(../fonts/NotoSansCJKjp-hinted/NotoSansJP-Bold.ttf) format('opentype');
+}
+@font-face {
+ font-family: 'Noto Sans';
+ font-style: normal;
+ font-weight: 900;
+ src: url(../fonts/NotoSansCJKjp-hinted/NotoSansJP-Black.woff2) format('woff2'),
+      url(../fonts/NotoSansCJKjp-hinted/NotoSansJP-Black.woff) format('woff'),
+      url(../fonts/NotoSansCJKjp-hinted/NotoSansJP-Black.ttf) format('opentype');
+}
+
+
+/*
+ * Sawarabi Gothic (Japanese) http://sawarabi-fonts.osdn.jp/
+ */
+@font-face {
+ font-family: 'Sawarabi Gothic';
+ font-style: normal;
+ font-weight: 400;
+ src: url(../fonts/sawarabi-gothic/SawarabiGothic-Regular.eot);
+ src: url(../fonts/sawarabi-gothic/SawarabiGothic-Regular.eot?#iefix) format('embedded-opentype'),
+      url(../fonts/sawarabi-gothic/SawarabiGothic-Regular.woff2) format('woff2'),
+      url(../fonts/sawarabi-gothic/SawarabiGothic-Regular.woff) format('woff'),
+      url(../fonts/sawarabi-gothic/SawarabiGothic-Regular.ttf) format('truetype');
+}

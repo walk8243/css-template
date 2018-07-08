@@ -1,61 +1,12 @@
-.bg-white {
-  background-color: #fff;
-}
-
-.bg-gray050 {
-  background-color: #a8b5c2;
-}
-
-.bg-gray100 {
-  background-color: #f8f9fa;
-}
-
-.bg-gray200 {
-  background-color: #e9ecef;
-}
-
-.bg-gray250 {
-  background-color: #e5e8eb;
-}
-
-.bg-gray300 {
-  background-color: #dee2e6;
-}
-
-.bg-gray400 {
-  background-color: #ced4da;
-}
-
-.bg-gray500 {
-  background-color: #adb5bd;
-}
-
-.bg-gray600 {
-  background-color: #6c757d;
-}
-
-.bg-gray700 {
-  background-color: #495057;
-}
-
-.bg-gray750 {
-  background-color: #3c4249;
-}
-
-.bg-gray800 {
-  background-color: #343a40;
-}
-
-.bg-gray900 {
-  background-color: #212529;
-}
-
-.bg-gray950 {
-  background-color: #3c4249;
-}
-
-.bg-black {
-  background-color: #000;
+/*
+ * Sawarabi Gothic (Japanese) http://sawarabi-fonts.osdn.jp/
+ */
+@font-face {
+  font-family: 'Sawarabi Gothic';
+  font-style: normal;
+  font-weight: 400;
+  src: url(/fonts/sawarabi-gothic/sawarabi-gothic-medium.ttf);
+  src: url(//fonts.gstatic.com/ea/sawarabigothic/v1/SawarabiGothic-Regular.eot?#iefix) format("embedded-opentype"), url(//fonts.gstatic.com/ea/sawarabigothic/v1/SawarabiGothic-Regular.woff2) format("woff2"), url(//fonts.gstatic.com/ea/sawarabigothic/v1/SawarabiGothic-Regular.woff) format("woff"), url(//fonts.gstatic.com/ea/sawarabigothic/v1/SawarabiGothic-Regular.ttf) format("truetype");
 }
 
 .bg-transparent {
@@ -154,8 +105,4 @@ button.dark:hover, button.dark:focus, .btn.dark:hover, .btn.dark:focus {
 
 .background-fixed-image::after {
   background-color: rgba(58, 58, 58, 0.25);
-}
-
-html {
-  color: #3c4249;
 }
