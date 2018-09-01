@@ -1,7 +1,7 @@
 {
   "name": "css-template",
-  "version": "1.0.0",
-  "description": "cssのbase",
+  "version": "2.0.0",
+  "description": "個人用に作成したCSSのテンプレート",
   "main": "index.js",
   "scripts": {
     "gulp": "node_modules/.bin/gulp",
