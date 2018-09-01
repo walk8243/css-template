@@ -1,5 +1,6 @@
 const CleanCSS  = require('clean-css'),
       fs        = require('fs'),
+      path      = require('path'),
       sass      = require('node-sass');
 
 const isExistFile = (filename) => {
@@ -8,6 +9,22 @@ const isExistFile = (filename) => {
           if(stats.isFile()) return true;
         } catch(error) {}
         return false;
+      },
+      isExistDir  = (dirname) => {
+        try {
+          var stats = fs.statSync(dirname);
+          if(stats.isDirectory()) return true;
+        } catch(error) {}
+        return false;
+      },
+      prepareStorage  = (pathname) => {
+        var parentDir = path.dirname(pathname);
+        if(!isExistDir(parentDir)) {
+          if(prepareStorage(parentDir)) {
+            fs.mkdirSync(parentDir);
+          }
+        }
+        return true;
       };
 
 
@@ -20,6 +37,7 @@ module.exports = (src = './sass/style.scss', dest = './public/style.css') => {
       outputStyle: 'expanded'
     }, (error, result) => {
       if(error) return reject(error);
+      prepareStorage(dest);
       var minimized = new CleanCSS().minify(result.css.toString()).styles;
       fs.writeFile(dest, minimized, err => {
         if(err) return reject(err);
