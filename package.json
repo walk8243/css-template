@@ -31,6 +31,7 @@
     "tunnel-agent": "^0.6.0"
   },
   "dependencies": {
+    "clean-css": "^4.2.1",
     "node-sass": "^4.9.3"
   }
 }
