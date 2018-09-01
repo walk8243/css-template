@@ -1,16 +1,25 @@
 # css-template
-cssのbase
+個人用に作成したCSSのテンプレート
 
-## 使用しているOSS
+## How to use
+### Example
+```example.js
+const cssTemplate = require('./lib/css-template');
+
+cssTemplate();
+```
+
+### コマンド
+- `npm run gulp`  
+Gulpを起動し、Sassをコンパイルする。
+- `npm run watch`  
+Gulpを起動し、Sassファイルを監視し、変更されるとSassのコンパイルを実行する。
+
+## OSS
+### In used
 - [twbs/bootstrap](https://github.com/twbs/bootstrap)
 
-## コマンド
-- `npm run gulp`  
-  Gulpを起動し、Sassをコンパイルする。
-- `npm run watch`  
-  Gulpを起動し、Sassファイルを監視し、変更されるとSassのコンパイルを実行する。
-
-## LICENSE
+### LICENSE
 - bootstrap@4.1.1  
   The MIT License (MIT)
 
