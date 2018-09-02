@@ -6,7 +6,12 @@ const func      = require('./func');
 
 const moduleDir = path.dirname(__dirname);
 
-const render  = async src => {
+module.exports = sass = {
+  render,
+  writeFile,
+};
+
+async function render(src) {
   if(!func.isExistFile(src)) throw new Error(`'${src}'が存在しないか、ファイルではありません。`);
   var result = nodeSass.renderSync({
     data: '@import "import";\n\n' + fs.readFileSync(src),
@@ -15,8 +20,8 @@ const render  = async src => {
   });
 
   return result;
-},
-writeFile = (css, dest) => {
+}
+function writeFile(css, dest) {
   return new Promise((resolve, reject) => {
     func.prepareStorage(dest);
     var minimized = new CleanCSS().minify(css).styles;
@@ -25,9 +30,4 @@ writeFile = (css, dest) => {
       resolve();
     });
   });
-};
-
-module.exports = sass = {
-  render,
-  writeFile,
-};
+}
