@@ -38,8 +38,8 @@ describe('Module script', () => {
         cssTemplate()
           .then(() => {
             assert.ok(stubSassRender.calledOnce);
-            assert.equal(stubSassRender.getCall(0).args[0], './sass/style.scss');
             assert.ok(stubSassWriteFile.calledOnce);
+            assert.equal(stubSassRender.getCall(0).args[0], './sass/style.scss');
             assert.equal(stubSassWriteFile.getCall(0).args[0], returnSassRenderCss);
             assert.equal(stubSassWriteFile.getCall(0).args[1], './public/style.css');
             done();
@@ -49,8 +49,8 @@ describe('Module script', () => {
         cssTemplate(srcSass, destSass)
           .then(() => {
             assert.ok(stubSassRender.calledOnce);
-            assert.equal(stubSassRender.getCall(0).args[0], srcSass);
             assert.ok(stubSassWriteFile.calledOnce);
+            assert.equal(stubSassRender.getCall(0).args[0], srcSass);
             assert.equal(stubSassWriteFile.getCall(0).args[0], returnSassRenderCss);
             assert.equal(stubSassWriteFile.getCall(0).args[1], destSass);
             done();
@@ -60,8 +60,8 @@ describe('Module script', () => {
         cssTemplate(srcSass)
           .then(() => {
             assert.ok(stubSassRender.calledOnce);
-            assert.equal(stubSassRender.getCall(0).args[0], srcSass);
             assert.ok(stubSassWriteFile.calledOnce);
+            assert.equal(stubSassRender.getCall(0).args[0], srcSass);
             assert.equal(stubSassWriteFile.getCall(0).args[0], returnSassRenderCss);
             assert.equal(stubSassWriteFile.getCall(0).args[1], './public/style.css');
             done();
@@ -71,8 +71,8 @@ describe('Module script', () => {
         cssTemplate(undefined, destSass)
           .then(() => {
             assert.ok(stubSassRender.calledOnce);
-            assert.equal(stubSassRender.getCall(0).args[0], './sass/style.scss');
             assert.ok(stubSassWriteFile.calledOnce);
+            assert.equal(stubSassRender.getCall(0).args[0], './sass/style.scss');
             assert.equal(stubSassWriteFile.getCall(0).args[0], returnSassRenderCss);
             assert.equal(stubSassWriteFile.getCall(0).args[1], destSass);
             done();
