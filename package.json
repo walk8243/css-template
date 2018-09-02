@@ -1,5 +1,5 @@
 {
-  "name": "css-template",
+  "name": "walk8243-css",
   "version": "2.0.0",
   "description": "個人用に作成したCSSのテンプレート",
   "main": "index.js",
@@ -12,7 +12,7 @@
     "type": "git",
     "url": "git+https://github.com/walk8243/css-template.git"
   },
-  "author": "walk8243",
+  "author": "walk8243 (https://qiita.com/walk8243)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/walk8243/css-template/issues"
@@ -38,5 +38,6 @@
   },
   "directories": {
     "test": "test"
-  }
+  },
+  "private": true
 }
