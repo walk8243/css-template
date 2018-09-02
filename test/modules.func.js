@@ -95,4 +95,87 @@ describe('func Module', () => {
       });
     });
   });
+
+  describe('prepareStorage', () => {
+    var stubPathDirname,
+        stubFuncIsExistDir,
+        stubFsMkdirSync,
+        spyFuncPrepareStorage;
+    before(() => {
+      stubPathDirname = sinon.stub(path, 'dirname');
+      stubFuncIsExistDir = sinon.stub(func, 'isExistDir');
+      stubFsMkdirSync = sinon.stub(fs, 'mkdirSync');
+      spyFuncPrepareStorage = sinon.spy(func, 'prepareStorage');
+    });
+    after(() => {
+      stubPathDirname.restore();
+      stubFuncIsExistDir.restore();
+      stubFsMkdirSync.restore();
+      spyFuncPrepareStorage.restore();
+    });
+    beforeEach(() => {
+      stubPathDirname.returns('hoge');
+      stubFuncIsExistDir.returns(true);
+      stubFsMkdirSync.returns();
+    });
+    afterEach(() => {
+      stubPathDirname.reset();
+      stubFuncIsExistDir.reset();
+      stubFsMkdirSync.reset();
+      spyFuncPrepareStorage.resetHistory();
+    });
+
+    describe('正常系', () => {
+      it('1回のみ', () => {
+        func.prepareStorage('fuga');
+        assert.ok(spyFuncPrepareStorage.calledOnce);
+        assert.ok(stubPathDirname.calledOnce);
+        assert.ok(stubFuncIsExistDir.calledOnce);
+        assert.ok(stubFsMkdirSync.notCalled);
+      });
+      it('2回', () => {
+        stubFuncIsExistDir.onFirstCall().returns(false);
+        func.prepareStorage('fuga');
+        assert.ok(spyFuncPrepareStorage.calledTwice);
+        assert.ok(stubPathDirname.calledTwice);
+        assert.ok(stubFuncIsExistDir.calledTwice);
+        assert.ok(stubFsMkdirSync.calledOnce);
+      });
+      it('5回目で終了', () => {
+        stubFuncIsExistDir.returns(false);
+        stubFuncIsExistDir.onCall(5-1).returns(true);
+        func.prepareStorage('fuga');
+        assert.equal(spyFuncPrepareStorage.callCount, 5);
+        assert.equal(stubPathDirname.callCount, 5);
+        assert.equal(stubFuncIsExistDir.callCount, 5);
+        assert.equal(stubFsMkdirSync.callCount, 4);
+      });
+    });
+    describe('異常系',() => {
+      it('path dirname Error', () => {
+        stubPathDirname.throws('path dirname Error');
+        try {
+          func.prepareStorage('fuga');
+          assert.fail();
+        } catch(error) {
+          assert.equal(error.name, 'path dirname Error');
+          assert.ok(stubPathDirname.calledOnce);
+        }
+      });
+      it('fs mkdirSync Error', () => {
+        stubFsMkdirSync.throws('fs mkdirSync Error');
+        stubFuncIsExistDir.onFirstCall().returns(false);
+        try {
+          func.prepareStorage('fuga');
+          assert.fail();
+        } catch(error) {
+          assert.equal(error.name, 'fs mkdirSync Error');
+          assert.ok(stubPathDirname.calledTwice);
+          assert.ok(stubFuncIsExistDir.calledTwice);
+          assert.ok(spyFuncPrepareStorage.calledTwice);
+          assert.ok(stubFsMkdirSync.calledOnce);
+        }
+      });
+    });
+  });
 });
