@@ -1,18 +1,18 @@
 {
-  "name": "css-template",
-  "version": "1.0.0",
-  "description": "cssのbase",
+  "name": "walk8243-css",
+  "version": "2.1.0",
+  "description": "個人用に作成したCSSのテンプレート",
   "main": "index.js",
   "scripts": {
     "gulp": "node_modules/.bin/gulp",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "node_modules/.bin/mocha --exit",
     "watch": "node_modules/.bin/gulp watch"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/walk8243/css-template.git"
   },
-  "author": "walk8243",
+  "author": "walk8243 (https://qiita.com/walk8243)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/walk8243/css-template/issues"
@@ -28,9 +28,16 @@
     "hoek": "^5.0.3",
     "lodash": "^4.17.10",
     "minimatch": "^3.0.4",
+    "mocha": "^5.2.0",
+    "sinon": "^6.1.5",
     "tunnel-agent": "^0.6.0"
   },
   "dependencies": {
+    "clean-css": "^4.2.1",
     "node-sass": "^4.9.3"
-  }
+  },
+  "directories": {
+    "test": "test"
+  },
+  "private": true
 }
