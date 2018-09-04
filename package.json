@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "gulp": "node_modules/.bin/gulp",
+    "install": "node scripts/install",
     "test": "node_modules/.bin/mocha --exit",
     "watch": "node_modules/.bin/gulp watch"
   },
