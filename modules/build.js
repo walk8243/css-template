@@ -4,7 +4,7 @@ const func = require('./func');
 const packageDir = path.dirname(__dirname),
       installDir = process.env.INIT_CWD || '.';
 
-module.exports = build = {
+const build = {
   copyFonts,
   copyDir,
   copyFile,
@@ -66,3 +66,5 @@ function createFile(filepath) {
     if(err) throw err;
   });
 }
+
+module.exports = build;

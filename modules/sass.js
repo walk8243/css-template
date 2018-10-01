@@ -6,7 +6,7 @@ const func      = require('./func');
 
 const moduleDir = path.dirname(__dirname);
 
-module.exports = sass = {
+const sass = {
   render,
   writeFile,
 };
@@ -31,3 +31,5 @@ function writeFile(css, dest) {
     });
   });
 }
+
+module.exports = sass;

@@ -1,7 +1,7 @@
 const fs        = require('fs'),
       path      = require('path');
 
-module.exports = func = {
+const func = {
   isExistFile,
   isExistDir,
   prepareStorage,
@@ -30,3 +30,5 @@ function prepareStorage(pathname) {
   }
   return true;
 }
+
+module.exports = func;
