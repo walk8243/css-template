@@ -14,7 +14,7 @@ const build = {
 
 function copyFonts() {
   const sourceDir = `${packageDir}/fonts`,
-        destDir   = `${installDir}/fonts`;
+        destDir   = `${installDir}/public/fonts`;
   // console.log(packageDir, installDir);
   build.copyDir(sourceDir, destDir);
 }
