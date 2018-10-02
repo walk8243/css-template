@@ -27,6 +27,10 @@
 
 // Specialize mixin
 @mixin hover-underline($color: $info) {
+  position: relative;
+  border-radius: $border-radius;
+  overflow: hidden;
+
   &::after {
     position: absolute;
     content: '';

@@ -1,4 +1,4 @@
-.bg-transparent {
+@mixin bg-transparent {
   background-color: transparent;
 }
 
@@ -6,7 +6,7 @@
   @include bg-btn(".#{$color}", $value);
 }
 
-.background-fixed-image {
+@mixin background-fixed-image {
   background-color: $gray-950;
   background-position: center;
   background-size: cover;

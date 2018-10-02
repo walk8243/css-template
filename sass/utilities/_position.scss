@@ -1,4 +1,4 @@
-.fixed-top {
+@mixin fixed-top {
   position: fixed;
   top: 0;
   right: 0;
@@ -6,7 +6,7 @@
   z-index: $zindex-fixed;
 }
 
-.fixed-bottom {
+@mixin fixed-bottom {
   position: fixed;
   right: 0;
   bottom: 0;
@@ -14,7 +14,7 @@
   z-index: $zindex-fixed;
 }
 
-.sticky-top {
+@mixin sticky-top {
   @supports (position: sticky) {
     position: sticky;
     top: 0;
