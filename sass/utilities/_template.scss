@@ -1,6 +1,8 @@
 @import "body";
 @import "border";
 
+$bleed: 30px !default;
+
 @mixin template-normal {
   html {
     &, * {
@@ -10,6 +12,8 @@
   body {
     display: grid;
     grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+    padding: 0 $bleed;
   }
   p {
     margin: 0;
@@ -18,9 +22,23 @@
     grid-row: 1 / 2;
     background: $white;
     box-shadow: 0 0 4px rgba(0,0,0,.14), 0 4px 8px rgba(0,0,0,.28);
+    margin: 0 -1 * $bleed 12px;
+    padding: 0 $bleed;
   }
   footer {
     grid-row: -2 / -1;
+    color: $gray-050;
     background: $gray-900;
+    margin: 0 -1 * $bleed;
+    padding: .5rem $bleed;
+  }
+  main {
+    padding: 0 1rem;
+  }
+
+  .copyright {
+    font-size: $font-size-sm;
+    text-align: center;
+    opacity: 0.8;
   }
 }
