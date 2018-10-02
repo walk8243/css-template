@@ -1,0 +1,26 @@
+@import "body";
+@import "border";
+
+@mixin template-normal {
+  html {
+    &, * {
+      box-sizing: border-box;
+    }
+  }
+  body {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+  }
+  p {
+    margin: 0;
+  }
+  header {
+    grid-row: 1 / 2;
+    background: $white;
+    box-shadow: 0 0 4px rgba(0,0,0,.14), 0 4px 8px rgba(0,0,0,.28);
+  }
+  footer {
+    grid-row: -2 / -1;
+    background: $gray-900;
+  }
+}
