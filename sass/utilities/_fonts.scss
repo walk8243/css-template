@@ -3,3 +3,109 @@ html {
     font-family: "Noto Sans";
   }
 }
+
+a {
+  &, &:hover {
+    color: #0000ee;
+  }
+  &:visited {
+    color: #551a85;
+  }
+  &:active {
+    color: #ff0000;
+  }
+}
+
+@mixin a-single-color($color: #0000ee) {
+  a {
+    &, &:visited, &:active {
+      color: $color;
+    }
+    &:hover {
+      &, &:visited, &:active {
+        color: getBetweenColor($color, $white, .8);
+      }
+    }
+  }
+}
+@mixin a-hover-underline($color: #0000ee, $visited: #551a85, $active: #ff0000) {
+  a{
+    &, &:hover {
+      color: $color;
+    }
+    &:visited {
+      color: $visited;
+    }
+    &:active {
+      color: $active;
+    }
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+@mixin a-hover-background($color: #0000ee, $visited: #551a85, $active: #ff0000) {
+  $weight: .15;
+  a {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 3px;
+    &, &:hover {
+      color: $color;
+    }
+    &:visited {
+      color: $visited;
+    }
+    &:active {
+      color: $active;
+    }
+    text-decoration: none;
+    &:hover {
+      background: getBetweenColor($color, $white, $weight);
+      &:visited {
+        background: getBetweenColor($visited, $white, $weight);
+      }
+      &:active {
+        background: getBetweenColor($active, $white, $weight);
+      }
+    }
+  }
+}
+
+@function getBetweenColor($color1, $color2: #ffffff, $weight: .5) {
+  @if($weight < 0 OR $weight > 1) {
+    @error "Error: argument `$weight` must be between 0 and 1";
+  }
+  $red1: red($color1);
+  $red2: red($color2);
+  $red3: 0;
+  // @debug $red1 +","+ $red2 +","+ $color1;
+  $green1: green($color1);
+  $green2: green($color2);
+  $green3: 0;
+  // @debug $green1 +","+ $green2 +","+ $color1;
+  $blue1: blue($color1);
+  $blue2: blue($color2);
+  $blue3: 0;
+  // @debug $blue1 +","+ $blue2 +","+ $color1;
+  @if($red1 >= $red2) {
+    $red3: ceil(($red1 - $red2) * $weight + $red2);
+  } @else {
+    $red3: ceil(($red2 - $red1) * (1 - $weight) + $red1);
+  }
+  // @debug $red3 +","+ $red1 +","+ $red2 +","+ $color1;
+  @if($green1 >= $green2) {
+    $green3: ceil(($green1 - $green2) / 2 + $green2);
+  } @else {
+    $green3: ceil(($green2 - $green1) / 2 + $green1);
+  }
+  // @debug $green3 +","+ $green1 +","+ $green2 +","+ $color1;
+  @if($blue1 >= $blue2) {
+    $blue3: ceil(($blue1 - $blue2) / 2 + $blue2);
+  } @else {
+    $blue3: ceil(($blue2 - $blue1) / 2 + $blue1);
+  }
+  // @debug $blue3 +","+ $blue1 +","+ $blue2 +","+ $color1;
+  @return rgb($red3, $green3, $blue3);
+}
