@@ -41,8 +41,16 @@ $bleed: 30px !default;
   }
 
   .copyright {
+    color: $gray-200;
     font-size: $font-size-sm;
     text-align: center;
     opacity: 0.8;
+
+    a {
+      text-decoration: unset;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
 }
