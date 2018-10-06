@@ -2,6 +2,7 @@
 @import "border";
 
 $bleed: 30px !default;
+$max: 10000px;
 
 @mixin template-normal {
   html {
@@ -26,15 +27,15 @@ $bleed: 30px !default;
     grid-row: 1 / 2;
     background: $white;
     box-shadow: 0 0 4px rgba(0,0,0,.14), 0 4px 8px rgba(0,0,0,.28);
-    margin: 0 -1 * $bleed 12px;
-    padding: 0 $bleed;
+    margin: 0 -1 * $max 12px;
+    padding: 0 $max;
   }
   footer {
     grid-row: -2 / -1;
     color: $gray-050;
     background: $gray-900;
-    margin: 0 -1 * $bleed;
-    padding: .5rem $bleed;
+    margin: 0 -1 * $max;
+    padding: .5rem $max;
   }
   main {
     padding: 0 1rem;
