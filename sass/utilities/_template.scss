@@ -15,13 +15,10 @@ $max: 10000px;
     grid-template-rows: auto 1fr auto;
     min-height: 100vh;
     padding: 0 $bleed;
+    overflow-x: hidden;
   }
   p {
     margin: 0;
-  }
-  img {
-    width: auto;
-    max-width: 100%;
   }
   header {
     grid-row: 1 / 2;
@@ -39,6 +36,13 @@ $max: 10000px;
   }
   main {
     padding: 0 1rem;
+
+    &>section {
+      margin-bottom: 2rem;
+      &:last-child {
+        margin-bottom: 1rem;
+      }
+    }
   }
 
   .copyright {
