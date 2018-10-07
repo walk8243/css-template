@@ -35,6 +35,13 @@ $max: 10000px;
   }
   main {
     padding: 0 1rem;
+
+    &>section {
+      margin-bottom: 2rem;
+      &:last-child {
+        margin-bottom: 1rem;
+      }
+    }
   }
 
   .copyright {
