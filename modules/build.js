@@ -5,19 +5,11 @@ const packageDir = path.dirname(__dirname),
       installDir = process.env.INIT_CWD || '.';
 
 const build = {
-  copyFonts,
   copyDir,
   copyFile,
   createDir,
   createFile,
 };
-
-function copyFonts() {
-  const sourceDir = `${packageDir}/fonts`,
-        destDir   = `${installDir}/public/fonts`;
-  // console.log(packageDir, installDir);
-  build.copyDir(sourceDir, destDir);
-}
 
 function copyDir(source, dest) {
   // console.log(source, dest);

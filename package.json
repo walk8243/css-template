@@ -1,6 +1,6 @@
 {
   "name": "walk8243-css",
-  "version": "2.3.1",
+  "version": "2.4.0",
   "description": "個人用に作成したCSSのテンプレート",
   "main": "index.js",
   "scripts": {
@@ -32,7 +32,7 @@
     "lodash": "^4.17.11",
     "minimatch": "^3.0.4",
     "mocha": "^5.2.0",
-    "sinon": "^6.3.4",
+    "sinon": "^6.3.5",
     "tunnel-agent": "^0.6.0"
   },
   "dependencies": {
