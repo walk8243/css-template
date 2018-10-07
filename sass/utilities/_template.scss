@@ -48,6 +48,7 @@ $max: 10000px;
     opacity: 0.8;
 
     a {
+      color: $gray-200;
       text-decoration: unset;
       &:hover {
         text-decoration: underline;
