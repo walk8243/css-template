@@ -15,6 +15,7 @@ $max: 10000px;
     grid-template-rows: auto 1fr auto;
     min-height: 100vh;
     padding: 0 $bleed;
+    overflow-x: hidden;
   }
   p {
     margin: 0;
