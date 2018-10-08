@@ -58,12 +58,6 @@ $max: 10000px;
     text-align: center;
     opacity: 0.8;
 
-    a {
-      color: $gray-200;
-      text-decoration: unset;
-      &:hover {
-        text-decoration: underline;
-      }
-    }
+    @include a-hover-underline($gray-200, $gray-200, $gray-200);
   }
 }
