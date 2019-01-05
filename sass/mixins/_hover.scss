@@ -47,3 +47,10 @@
     }
   }
 }
+
+@mixin hover-expansion($scale: 1.1, $duration: 0.3) {
+  transition-duration: $duration * 1s;
+  &:hover {
+    transform: scale($scale);
+  }
+}
