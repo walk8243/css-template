@@ -18,7 +18,6 @@ $max: 10000px;
     grid-template-rows: auto 1fr auto;
     min-height: 100vh;
     padding: 0 $bleed-pc;
-
     @include media-breakpoint-down(sm) {
       padding: 0 $bleed-sm;
     }
@@ -49,6 +48,10 @@ $max: 10000px;
   }
   main {
     padding: 0 1rem;
+    @include media-breakpoint-down(sm) {
+      padding-left: 0;
+      padding-right: 0;
+    }
 
     &>section {
       margin-bottom: 2rem;
