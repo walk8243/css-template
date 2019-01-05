@@ -1,11 +1,14 @@
 @import "body";
 @import "border";
 
-$bleed: 30px !default;
+$bleed-pc: 30px !default;
+$bleed-sm: 10px !default;
 $max: 10000px;
 
 @mixin template-normal {
   html {
+    overflow-x: hidden;
+
     &, * {
       box-sizing: border-box;
     }
@@ -14,8 +17,10 @@ $max: 10000px;
     display: grid;
     grid-template-rows: auto 1fr auto;
     min-height: 100vh;
-    padding: 0 $bleed;
-    overflow-x: hidden;
+    padding: 0 $bleed-pc;
+    @include media-breakpoint-down(sm) {
+      padding: 0 $bleed-sm;
+    }
   }
   p {
     margin: 0;
@@ -43,6 +48,10 @@ $max: 10000px;
   }
   main {
     padding: 0 1rem;
+    @include media-breakpoint-down(sm) {
+      padding-left: 0;
+      padding-right: 0;
+    }
 
     &>section {
       margin-bottom: 2rem;
