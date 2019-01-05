@@ -1,6 +1,6 @@
 {
   "name": "walk8243-css",
-  "version": "2.4.3",
+  "version": "2.5.0",
   "description": "個人用に作成したCSSのテンプレート",
   "main": "index.js",
   "scripts": {
@@ -27,7 +27,7 @@
     "gulp-cssmin": "^0.2.0",
     "gulp-frontnote": "^2.0.1",
     "gulp-rename": "^1.4.0",
-    "gulp-sass": "^4.0.1",
+    "gulp-sass": "^4.0.2",
     "hoek": "^5.0.4",
     "lodash": "^4.17.11",
     "minimatch": "^3.0.4",
@@ -37,7 +37,7 @@
   },
   "dependencies": {
     "clean-css": "^4.2.1",
-    "node-sass": "^4.9.3"
+    "node-sass": "^4.11.0"
   },
   "directories": {
     "test": "test"
