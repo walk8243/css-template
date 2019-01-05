@@ -97,6 +97,12 @@ html {
   font-size: 16px;
 }
 
+@media (max-width: 767.98px) {
+  html {
+    font-size: 18px;
+  }
+}
+
 body {
   margin: 0;
 }
