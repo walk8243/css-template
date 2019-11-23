@@ -1,11 +1,14 @@
 @import "body";
 @import "border";
 
-$bleed: 30px !default;
+$bleed-pc: 30px !default;
+$bleed-sm: 10px !default;
 $max: 10000px;
 
 @mixin template-normal {
   html {
+    overflow-x: hidden;
+
     &, * {
       box-sizing: border-box;
     }
@@ -14,8 +17,10 @@ $max: 10000px;
     display: grid;
     grid-template-rows: auto 1fr auto;
     min-height: 100vh;
-    padding: 0 $bleed;
-    overflow-x: hidden;
+    padding: 0 $bleed-pc;
+    @include media-breakpoint-down(sm) {
+      padding: 0 $bleed-sm;
+    }
   }
   p {
     margin: 0;
@@ -25,8 +30,9 @@ $max: 10000px;
     background: $white;
     box-shadow: 0 0 4px rgba(0,0,0,.14), 0 4px 8px rgba(0,0,0,.28);
     margin: 0 -1 * $max 12px;
-    padding: 0 $max;
+    padding: 5px $max;
     line-height: 0;
+    z-index: 100;
 
     img {
       height: auto;
@@ -42,11 +48,19 @@ $max: 10000px;
   }
   main {
     padding: 0 1rem;
+    @include media-breakpoint-down(sm) {
+      padding-left: 0;
+      padding-right: 0;
+    }
 
     &>section {
       margin-bottom: 2rem;
       &:last-child {
         margin-bottom: 1rem;
+      }
+
+      h1, h2, h3, h4, h5, h6 {
+        margin-bottom: 0;
       }
     }
   }
@@ -57,12 +71,6 @@ $max: 10000px;
     text-align: center;
     opacity: 0.8;
 
-    a {
-      color: $gray-200;
-      text-decoration: unset;
-      &:hover {
-        text-decoration: underline;
-      }
-    }
+    @include a-hover-underline($gray-200, $gray-200, $gray-200);
   }
 }

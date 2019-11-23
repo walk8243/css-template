@@ -48,9 +48,9 @@
   }
 }
 
-@mixin hover-expansion {
-  transition-duration: .3s;
-  &:hover{
-    transform: scale(1.1);
+@mixin hover-expansion($scale: 1.1, $duration: 0.3) {
+  transition-duration: $duration * 1s;
+  &:hover {
+    transform: scale($scale);
   }
 }
