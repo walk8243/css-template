@@ -15,15 +15,10 @@ walk8243Css();
 ```
 
 ### git clone
-#### コマンド
-- `npm run gulp`  
-Gulpを起動し、Sassをコンパイルする。
-- `npm run watch`  
-Gulpを起動し、Sassファイルを監視し、変更されるとSassのコンパイルを実行する。
 
 ## OSS
 ### In used
 - [twbs/bootstrap](https://github.com/twbs/bootstrap)
 
 ## License
-walk8243-css is released under the [MIT License](https://github.com/walk8243/css-template/blob/module/LICENSE)
+walk8243-css is released under the [MIT License](./LICENSE)
