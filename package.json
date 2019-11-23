@@ -1,6 +1,6 @@
 {
   "name": "@walk8243/css-template",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "description": "個人用に作成したCSSのテンプレート",
   "main": "index.js",
   "scripts": {
