@@ -6,7 +6,6 @@
   "scripts": {
     "install": "node scripts/install",
     "mocha": "mocha --exit",
-    "prepublishOnly": "npm update && npm test > /dev/null",
     "test": "npm run mocha -- -R nyan"
   },
   "repository": {
