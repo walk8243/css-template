@@ -1,46 +1,35 @@
 {
-  "name": "walk8243-css",
-  "version": "2.4.2",
+  "name": "@walk8243/css-template",
+  "version": "3.0.0",
   "description": "個人用に作成したCSSのテンプレート",
   "main": "index.js",
   "scripts": {
-    "gulp": "gulp",
     "install": "node scripts/install",
     "mocha": "mocha --exit",
-    "prepublishOnly": "npm update && npm test > /dev/null",
-    "test": "npm run mocha -- -R nyan",
-    "watch": "gulp watch"
+    "test": "npm run mocha -- -R nyan"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/walk8243/css-template.git"
   },
-  "author": "walk8243 (https://qiita.com/walk8243)",
+  "author": "walk8243",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/walk8243/css-template/issues"
   },
   "homepage": "https://github.com/walk8243/css-template#readme",
   "devDependencies": {
-    "gulp": "^4.0.0",
-    "gulp-autoprefixer": "^5.0.0",
-    "gulp-cssmin": "^0.2.0",
-    "gulp-frontnote": "^2.0.1",
-    "gulp-rename": "^1.4.0",
-    "gulp-sass": "^4.0.1",
-    "hoek": "^5.0.4",
-    "lodash": "^4.17.11",
-    "minimatch": "^3.0.4",
-    "mocha": "^5.2.0",
-    "sinon": "^6.3.5",
-    "tunnel-agent": "^0.6.0"
+    "mocha": "^6.2.2",
+    "sinon": "^7.5.0"
   },
   "dependencies": {
     "clean-css": "^4.2.1",
-    "node-sass": "^4.9.3"
+    "node-sass": "^4.13.0"
   },
   "directories": {
     "test": "test"
   },
-  "private": true
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  }
 }
