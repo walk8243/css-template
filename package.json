@@ -1,6 +1,6 @@
 {
   "name": "@walk8243/css-template",
-  "version": "3.1.2",
+  "version": "3.2.0",
   "description": "個人用に作成したCSSのテンプレート",
   "main": "index.js",
   "scripts": {
@@ -25,7 +25,7 @@
   "dependencies": {
     "clean-css": "^5.2.1",
     "minimatch": "^3.0.4",
-    "node-sass": "^6.0.1"
+    "sass": "^1.43.4"
   },
   "directories": {
     "test": "test"

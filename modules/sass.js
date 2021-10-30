@@ -1,6 +1,6 @@
 const CleanCSS  = require('clean-css'),
       fs        = require('fs'),
-      nodeSass  = require('node-sass'),
+      nodeSass  = require('sass'),
       path      = require('path');
 const func      = require('./func');
 
